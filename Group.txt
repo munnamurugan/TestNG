@@ -27,7 +27,11 @@ public class ParameterExample extends BaseClassExample {
 		}}
 	@Test(priority = 2)
 	public void socialMedia() {
-		url("https://www.google.co.in/");
-		
-		
-	}}
+		url("https://www.google.co.in/");	
+	}
+	@Test(priority = 3)
+	public void opensite() {
+		url("https://www.hdfcbank.co.in/");	
+	}
+	
+	}
