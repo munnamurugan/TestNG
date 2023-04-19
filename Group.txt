@@ -1,0 +1,33 @@
+TestNG: Parameter passing
+public class ParameterExample extends BaseClassExample {
+	
+	@Test(priority = 1)
+	@Parameters("Name")
+	public void openBrowser(String browserName) {
+		switch (browserName) {
+		case "chrome":
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			break;
+		case "firefox":
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+			break;
+		case "edge":
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+			driver.manage().window().maximize();
+			break;
+			default:
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				driver.manage().window().maximize();
+		}}
+	@Test(priority = 2)
+	public void socialMedia() {
+		url("https://www.google.co.in/");
+		
+		
+	}}
